@@ -1,5 +1,7 @@
 # TemplateMaterialAngular
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/85b8642b-3461-48ea-a2b2-713984d32c1e/deploy-status)](https://app.netlify.com/sites/idyllic-gumdrop-9e3742/deploys)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
 
 ## Development server
