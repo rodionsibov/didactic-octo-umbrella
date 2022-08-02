@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@include mat.core();
+
+$market-primary: mat.define-palette(mat.$light-blue-palette);
+$market-accent: mat.define-palette(mat.$light-green-palette);
+$market-warn: mat.define-palette(mat.$red-palette);
+
+$market-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $market-primary,
+      accent: $market-accent,
+      warn: $market-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($market-theme);
+
+// for dark theme
+$market-primary-dark: mat.define-palette(mat.$orange-palette);
+$market-accent-dark: mat.define-palette(mat.$yellow-palette);
+$market-warn-dark: mat.define-palette(mat.$red-palette);
+
+$market-theme-dark: mat.define-dark-theme(
+  (
+    color: (
+      primary: $market-primary-dark,
+      accent: $market-accent-dark,
+      warn: $market-warn-dark,
+    ),
+  )
+);
+
+.dark-theme-mode {
+  @include mat.all-component-themes($market-theme-dark);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.error.mat-snack-bar-container {
+  background-color: red;
+  font: white;
+}
+
+.success.mat-snack-bar-container {
+  background-color: green;
+  font: white;
+}
