@@ -4,9 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { SchematicsComponent } from './schematics/schematics.component';
 
 const routes: Routes = [
-  { path: '**', redirectTo: '/home' },
   { path: 'home', component: HomeComponent },
   { path: 'schematics', component: SchematicsComponent },
+  { path: '**', redirectTo: '/home' },
 ];
 
 @NgModule({
